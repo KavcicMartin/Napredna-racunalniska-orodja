@@ -1,9 +1,9 @@
 n = 10000;
-[x1_znotraj, y1_znotraj, x1_zunaj, y1_zunaj, znotraj]= mcc_pi(n);
-[pi_izrac, napaka] = area_pi(n, znotraj);
+[x1_notri, y1_notri, x1_zunaj, y1_zunaj, notri]= mcc_pi(n);
+[pi_izrac, napaka] = area_pi(n, notri);
 
 % Izriše točke
-plot(x1_znotraj,y1_znotraj,'b.');
+plot(x1_notri,y1_notri,'b.');
 hold on
 plot(x1_zunaj,y1_zunaj,'r.');
 
@@ -14,8 +14,8 @@ xlabel('x')
 ylabel('y') 
 
 % Funkcija, ki vse to omogoča
-function[pi_izr, napaka] = area_pi(n, znotraj)
+function[pi_izr, napaka] = area_pi(n, notri)
 mcc_pi(n);
-pi_izr = 4*sum(znotraj)/n;
+pi_izr = 4*sum(notri)/n;
 napaka = abs(pi - pi_izr);
 end
