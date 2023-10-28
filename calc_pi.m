@@ -9,6 +9,9 @@ plot(x1_zunaj,y1_zunaj,'r.');
 
 % Izriše krožnico z radijem r
 fplot(@(t) 0.5*sin(t), @(t) 0.5*cos(t))
+title('Grafični prikaz točk')
+xlabel('x') 
+ylabel('y') 
 
 % Funkcija, ki vse to omogoča
 function[pi_izr, napaka] = area_pi(n, znotraj)
