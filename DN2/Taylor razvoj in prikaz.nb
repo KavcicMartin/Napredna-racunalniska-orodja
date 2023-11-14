@@ -1,0 +1,403 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14616,        395]
+NotebookOptionsPosition[     13563,        367]
+NotebookOutlinePosition[     13962,        383]
+CellTagsIndexPosition[     13919,        380]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RAZVOJ V TAYLORJEVO VRSTO", "Title",
+ CellChangeTimes->{{3.9088743683836575`*^9, 
+  3.9088743820352087`*^9}},ExpressionUUID->"e21e4a38-12f9-4f30-a0c0-\
+fe4de4c19db0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t0", "=", "2"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", "=", "5"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Red", " ", "razvoja", " ", "na\[SHacek]e", " ", "funkcije"}], 
+   "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "t_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Sin", "[", "t", "]"}], " ", 
+     RowBox[{"t", "^", "2"}], " ", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"-", "t"}], "]"}]}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TaylorVrsta", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "t", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "t0", ",", "n"}], "}"}]}], "]"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"TaylorVrsta", "//", "TraditionalForm"}], "\[IndentingNewLine]", 
+  "\n"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9088724023027678`*^9, 3.908872402304166*^9}, {
+   3.9088724366474056`*^9, 3.908872437461201*^9}, 3.908872467907957*^9, {
+   3.908872513288848*^9, 3.908872541336924*^9}, {3.9088726584727125`*^9, 
+   3.9088726823600216`*^9}, {3.908872799486411*^9, 3.9088728038356*^9}, {
+   3.9088736480729055`*^9, 3.908873652772072*^9}, 3.9088737050533075`*^9, 
+   3.9088739508502827`*^9, {3.908984057969347*^9, 3.908984059162638*^9}, {
+   3.9089842357027564`*^9, 3.9089842422083616`*^9}, {3.908984313499228*^9, 
+   3.908984340833928*^9}, {3.908984388082363*^9, 3.90898439029021*^9}, {
+   3.908984530847974*^9, 3.9089845468155003`*^9}, {3.908984671848954*^9, 
+   3.908984677826232*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"c6b2ddb4-bbaf-403e-9231-3db72f3e9c40"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"4", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", "t"}], ")"}], " ", 
+    RowBox[{"Cos", "[", "2", "]"}]}], 
+   SuperscriptBox["\[ExponentialE]", "2"]], "+", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "t"}], ")"}], "5"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "2", "]"}], "-", 
+      RowBox[{"Sin", "[", "2", "]"}]}], ")"}]}], 
+   RowBox[{"5", " ", 
+    SuperscriptBox["\[ExponentialE]", "2"]}]], "+", 
+  FractionBox[
+   RowBox[{"4", " ", 
+    RowBox[{"Sin", "[", "2", "]"}]}], 
+   SuperscriptBox["\[ExponentialE]", "2"]], "-", 
+  FractionBox[
+   RowBox[{"3", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "t"}], ")"}], "2"], " ", 
+    RowBox[{"Sin", "[", "2", "]"}]}], 
+   SuperscriptBox["\[ExponentialE]", "2"]], "+", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "t"}], ")"}], "3"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "5"}], " ", 
+       RowBox[{"Cos", "[", "2", "]"}]}], "+", 
+      RowBox[{"Sin", "[", "2", "]"}]}], ")"}]}], 
+   RowBox[{"3", " ", 
+    SuperscriptBox["\[ExponentialE]", "2"]}]], "+", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "t"}], ")"}], "4"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "2", "]"}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Sin", "[", "2", "]"}]}]}], ")"}]}], 
+   RowBox[{"3", " ", 
+    SuperscriptBox["\[ExponentialE]", "2"]}]]}]], "Output",
+ CellChangeTimes->{
+  3.908872806877709*^9, {3.908873655845049*^9, 3.90887370595055*^9}, 
+   3.9088739518514943`*^9, 3.908984096376884*^9, 3.908984134908569*^9, 
+   3.9089842467975607`*^9, {3.908984323170731*^9, 3.9089843364562845`*^9}, 
+   3.9089843909201508`*^9, {3.908984539271587*^9, 3.9089845477654753`*^9}, 
+   3.9089846824062624`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"896e53bd-bb01-4fd9-9878-406348898e0e"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"t", "-", "2"}], ")"}], "2"], " ", 
+      RowBox[{"sin", "(", "2", ")"}]}], 
+     SuperscriptBox["\[ExponentialE]", "2"]]}], "+", 
+   FractionBox[
+    RowBox[{"4", " ", 
+     RowBox[{"(", 
+      RowBox[{"t", "-", "2"}], ")"}], " ", 
+     RowBox[{"cos", "(", "2", ")"}]}], 
+    SuperscriptBox["\[ExponentialE]", "2"]], "+", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"t", "-", "2"}], ")"}], "5"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"cos", "(", "2", ")"}], "-", 
+       RowBox[{"sin", "(", "2", ")"}]}], ")"}]}], 
+    RowBox[{"5", " ", 
+     SuperscriptBox["\[ExponentialE]", "2"]}]], "+", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"t", "-", "2"}], ")"}], "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"sin", "(", "2", ")"}]}], "+", 
+       RowBox[{"cos", "(", "2", ")"}]}], ")"}]}], 
+    RowBox[{"3", " ", 
+     SuperscriptBox["\[ExponentialE]", "2"]}]], "+", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"t", "-", "2"}], ")"}], "3"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"sin", "(", "2", ")"}], "-", 
+       RowBox[{"5", " ", 
+        RowBox[{"cos", "(", "2", ")"}]}]}], ")"}]}], 
+    RowBox[{"3", " ", 
+     SuperscriptBox["\[ExponentialE]", "2"]}]], "+", 
+   FractionBox[
+    RowBox[{"4", " ", 
+     RowBox[{"sin", "(", "2", ")"}]}], 
+    SuperscriptBox["\[ExponentialE]", "2"]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.908872806877709*^9, {3.908873655845049*^9, 3.90887370595055*^9}, 
+   3.9088739518514943`*^9, 3.908984096376884*^9, 3.908984134908569*^9, 
+   3.9089842467975607`*^9, {3.908984323170731*^9, 3.9089843364562845`*^9}, 
+   3.9089843909201508`*^9, {3.908984539271587*^9, 3.9089845477654753`*^9}, 
+   3.9089846824162316`*^9},
+ CellLabel->
+  "Out[5]//TraditionalForm=",ExpressionUUID->"0eabb7be-d429-4b7c-a07a-\
+263dc8b41cd3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GRAFI\[CapitalCHacek]NI PRIKAZ", "Title",
+ CellChangeTimes->{{3.908874343055699*^9, 
+  3.908874358043298*^9}},ExpressionUUID->"8a981122-6bb1-4c65-bc6a-\
+3d3930dc7e43"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t0", ",", "f", ",", "TaylorVrsta", ",", "Graf"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"t0", "=", "2"}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"f", "[", "t_", "]"}], ":=", 
+        RowBox[{
+         RowBox[{"Sin", "[", "t", "]"}], " ", 
+         RowBox[{"t", "^", "2"}], " ", 
+         RowBox[{"Exp", "[", 
+          RowBox[{"-", "t"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"TaylorVrsta", "=", 
+        RowBox[{"Normal", "[", 
+         RowBox[{"Series", "[", 
+          RowBox[{
+           RowBox[{"f", "[", "t", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"t", ",", "t0", ",", "n"}], "}"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Graf", "=", 
+        RowBox[{"Plot", "[", 
+         RowBox[{
+          RowBox[{"Evaluate", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"f", "[", "t", "]"}], ",", "TaylorVrsta"}], "}"}], "]"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "4"}], "}"}], ",", 
+          RowBox[{"PlotRange", "->", "All"}], ",", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"{", 
+            RowBox[{"Automatic", ",", "Dashed"}], "}"}]}], ",", 
+          RowBox[{"Epilog", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"PointSize", "[", "0.02", "]"}], ",", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t0", ",", 
+                  RowBox[{"f", "[", "t0", "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"t0", ",", 
+                  RowBox[{"TaylorVrsta", "/.", " ", 
+                   RowBox[{"t", "->", "t0"}]}]}], "}"}]}], "}"}], "]"}]}], 
+            "}"}]}], ",", 
+          RowBox[{"Frame", "->", "True"}], ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            RowBox[{"\"\<t\>\"", ",", "\"\<f(t)\>\""}], "}"}]}], ",", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"TraditionalForm", "[", 
+              RowBox[{"f", "[", "t", "]"}], "]"}], ",", 
+             RowBox[{"Row", "[", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Pribli\[ZHacek]ek = \>\"", ",", 
+                RowBox[{"TraditionalForm", "[", "TaylorVrsta", "]"}]}], "}"}],
+               "]"}]}], "}"}]}], ",", 
+          RowBox[{"GridLines", "->", "Automatic"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Show", "[", "Graf", "]"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "\"\<Red pribli\[ZHacek]ka:\>\""}], "}"}], 
+      ",", "1", ",", "10", ",", "1", ",", 
+      RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}]}], "]"}], 
+  "\n"}]], "Input",
+ CellChangeTimes->{{3.9088739868200717`*^9, 3.9088739868217382`*^9}, 
+   3.9088741365006094`*^9, {3.908874173734949*^9, 3.9088741783997064`*^9}, {
+   3.9088743000396175`*^9, 3.908874330697673*^9}, {3.9089840790164337`*^9, 
+   3.908984089845475*^9}, {3.9089841752625046`*^9, 3.908984175885127*^9}, {
+   3.9089842059490194`*^9, 3.9089842135329733`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"47444fc4-5753-4933-ae74-c9e5dc50409e"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "Red pribli\[ZHacek]ka:"}, 1, 10, 1}}, 
+    Typeset`size$$ = {588.1999999999999, {114., 120.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`t0$, $CellContext`f$, $CellContext`TaylorVrsta$, \
+$CellContext`Graf$}, $CellContext`t0$ = 2; $CellContext`f$[
+           Pattern[$CellContext`t, 
+            Blank[]]] := 
+         Sin[$CellContext`t] $CellContext`t^2 
+          Exp[-$CellContext`t]; $CellContext`TaylorVrsta$ = Normal[
+           Series[
+            $CellContext`f$[$CellContext`t], {$CellContext`t, \
+$CellContext`t0$, $CellContext`n$$}]]; $CellContext`Graf$ = Plot[
+           Evaluate[{
+             $CellContext`f$[$CellContext`t], $CellContext`TaylorVrsta$}], \
+{$CellContext`t, 0, 4}, PlotRange -> All, PlotStyle -> {Automatic, Dashed}, 
+           Epilog -> {
+             PointSize[0.02], 
+             Point[{{$CellContext`t0$, 
+                $CellContext`f$[$CellContext`t0$]}, {$CellContext`t0$, 
+                
+                ReplaceAll[$CellContext`TaylorVrsta$, $CellContext`t -> \
+$CellContext`t0$]}}]}, Frame -> True, FrameLabel -> {"t", "f(t)"}, 
+           PlotLegends -> {
+             TraditionalForm[
+              $CellContext`f$[$CellContext`t]], 
+             Row[{"Pribli\[ZHacek]ek = ", 
+               TraditionalForm[$CellContext`TaylorVrsta$]}]}, GridLines -> 
+           Automatic]; Show[$CellContext`Graf$]], 
+      "Specifications" :> {{{$CellContext`n$$, 1, "Red pribli\[ZHacek]ka:"}, 
+         1, 10, 1, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{637., {158.13403309800196`, 163.86596690199804`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.908873987201866*^9, 3.908874136906153*^9, 3.9088741793902893`*^9, {
+   3.9088743148160996`*^9, 3.9088743310838356`*^9}, 3.9089840936638317`*^9, {
+   3.90898413804463*^9, 3.9089841771370945`*^9}, 3.908984218630989*^9, 
+   3.9089846872786655`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"651aef0f-4e58-4081-bfd5-7c1ae872a6da"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1428, 735.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"228afa8b-960f-4ee8-8f12-b2ebf6293507"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 172, 3, 98, "Title",ExpressionUUID->"e21e4a38-12f9-4f30-a0c0-fe4de4c19db0"],
+Cell[CellGroupData[{
+Cell[777, 29, 1706, 40, 219, "Input",ExpressionUUID->"c6b2ddb4-bbaf-403e-9231-3db72f3e9c40"],
+Cell[2486, 71, 2122, 66, 51, "Output",ExpressionUUID->"896e53bd-bb01-4fd9-9878-406348898e0e"],
+Cell[4611, 139, 2114, 64, 65, "Output",ExpressionUUID->"0eabb7be-d429-4b7c-a07a-263dc8b41cd3"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6774, 209, 173, 3, 98, "Title",ExpressionUUID->"8a981122-6bb1-4c65-bc6a-3d3930dc7e43"],
+Cell[CellGroupData[{
+Cell[6972, 216, 3424, 83, 143, "Input",ExpressionUUID->"47444fc4-5753-4933-ae74-c9e5dc50409e"],
+Cell[10399, 301, 3136, 62, 364, "Output",ExpressionUUID->"651aef0f-4e58-4081-bfd5-7c1ae872a6da"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
